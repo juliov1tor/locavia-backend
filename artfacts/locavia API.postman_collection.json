@@ -1,0 +1,127 @@
+{
+	"info": {
+		"_postman_id": "99dbd325-0cda-49ff-8c76-f078f51d0bcb",
+		"name": "locavia API",
+		"description": "Conjunto de requisições para as rotas da API de veículos",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "30935043"
+	},
+	"item": [
+		{
+			"name": "Obter todos os veículos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/vehicles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar um novo veículo",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"placa\": \"ABC1231\",\n  \"chassi\": \"1HGCM82633A1234567\",\n  \"renavam\": \"123456478901\",\n  \"modelo\": \"Civic G10\",\n  \"marca\": \"Honda\",\n  \"ano\": 2020\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/vehicles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"vehicles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Obter um veículo específico",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/vehicles/17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"vehicles",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar um veículo",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"placa\": \"DEF5671\",\n  \"chassi\": \"1HGCM82633A654321\",\n  \"renavam\": \"10987654321\",\n  \"modelo\": \"Accord\",\n  \"marca\": \"Honda\",\n  \"ano\": 2021\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/vehicles/17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"vehicles",
+						"17"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir um veículo",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/vehicles/17",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"vehicles",
+						"17"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
